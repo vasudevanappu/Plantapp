@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bamboo Plant Information</title>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        padding: 20px;
+        font-size: 2em;
+        color: #1b5e20;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    .card {
+        background: white;
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.02);
+    }
+    .slideshow {
+        position: relative;
+        width: 100%;
+        height: 350px; /* Landscape-friendly height */
+        overflow: hidden;
+        border-radius: 10px;
+        background: #000; /* Background to avoid blank gaps */
+    }
+    .slideshow img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Landscape fit without distortion */
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .slideshow img.active {
+        opacity: 1;
+    }
+    h2 {
+        color: #2e7d32;
+        margin: 15px 0 10px;
+    }
+    p {
+        color: #555;
+        line-height: 1.6;
+    }
+    table {
+        width: 100%;
+        margin-top: 15px;
+        border-collapse: collapse;
+        font-size: 1em;
+    }
+    th, td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+    th {
+        background: #e8f5e9;
+        color: #1b5e20;
+    }
+    tr:hover {
+        background: #f1f8e9;
+    }
+</style>
+</head>
+<body>
+
+<header>🎋 Bamboo Plant Information</header>
+
+<div class="card">
+    <div class="slideshow" id="slideshow">
+        <img src="https://wallpaperaccess.com/full/4768415.jpg" class="active" alt="Bamboo 1">
+        <img src="https://goodwallpapers.com/files/preview/1280x857/1821739640579zudf0d8ekeitskcxylm0brduh89gwputqxlaewga6bkebsmdauazihfggd4whkw4t9cckg1fp6a8jnivikdinfilbanhxoqhqong.jpg" alt="Bamboo 2">
+        <img src="https://wallpaperaccess.com/full/113129.jpg" alt="Bamboo 3">
+        <img src="https://goodwallpapers.com/files/preview/960x1280/1021739639771sacc0n2qewkw2qw8re0zezg4jzivkb7olqmvuqwucjqk44n591qsphfugufa0rpfsmbxbqacoklwtrjjwnsyn3ktk0wcnidpncym.jpg" alt="Bamboo 4">
+        <img src="https://goodwallpapers.com/files/preview/960x1709/1091739639005hf8rms9oexwgaeksnowuubgk6jmf8ul4hutvjfpijxxcdrds8mgtnnqdt7nmqg0ie1odlfdwbi3kd1juzhke9dycb0tdwpvx4xjg.jpg" alt="Bamboo 5">
+        <img src="https://goodwallpapers.com/files/preview/960x1438/621739634707tfbpipcenpgkiijcb6hfa2lxzvsk8ulxnjkr9zo2qkimre3qaonaxmwctwqm7eqnnodpf65bqvozujbceo0icglfqa4sdxry3t57.jpg" alt="Bamboo 6">
+    </div>
+
+    <h2>Bamboo Plant</h2>
+    <p>
+        Bamboo is a fast-growing perennial plant belonging to the grass family Poaceae.
+        It is known for its tall, woody stems and can grow up to 91 cm (35 inches) in a single day.
+        Bamboo is widely used for construction, furniture, paper, and as a food source in the form of bamboo shoots.
+    </p>
+
+    <table>
+        <tr>
+            <th>Scientific Name</th>
+            <td>Bambusoideae</td>
+        </tr>
+        <tr>
+            <th>Average Lifespan</th>
+            <td>Several decades (depending on species)</td>
+        </tr>
+        <tr>
+            <th>Height</th>
+            <td>Up to 30 meters</td>
+        </tr>
+        <tr>
+            <th>Native Region</th>
+            <td>Asia, Africa, Americas</td>
+        </tr>
+        <tr>
+            <th>Uses</th>
+            <td>Construction, furniture, paper, food (bamboo shoots)</td>
+        </tr>
+        <tr>
+            <th>Special Feature</th>
+            <td>Can grow more than 90 cm in a single day</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    const images = document.querySelectorAll("#slideshow img");
+    let index = 0;
+    setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+    }, 3000);
+</script>
+
+</body>
+</html>
